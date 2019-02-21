@@ -26,14 +26,11 @@ end
 
 def kesha_maker(array)
   array.collect {|string| string[2] = "$"}
-  binding.pry
   array
 end
 
 def find_a(array)
-  a_arr = []
-  array.each {|a| a_arr << a if a.start_with?("a")}
-  a_arr
+  array.collect {|a| a if a.start_with?("a")}
 end
 
 def sum_array(array)
