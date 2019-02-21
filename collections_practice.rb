@@ -1,5 +1,3 @@
-require 'pry'
-
 def sort_array_asc(array)
   array.sort
 end
@@ -25,12 +23,8 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  new_arr = []
-  array.each do |string|
-    string[2] = "$"
-    new_arr << string
-  end
-  new_arr
+  array.collect {|string| string[2] = "$"}
+  array
 end
 
 def find_a(array)
